@@ -1,6 +1,7 @@
 import { create } from 'domain';
 import {glob} from 'glob';
 import { URLSearchParams } from 'url';
+import * as os from 'os';
 import * as vscode from 'vscode';
 import { Bookmarkable, BookmarkableKind, bookmarkableLabelComparator, Favorite, Folder, Group, RootGroup } from './model';
 import { FavoriteStore } from './store';

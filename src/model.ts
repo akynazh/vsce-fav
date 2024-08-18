@@ -2,6 +2,7 @@ import * as vscode from 'vscode';
 import { ThemeIcon, TreeItem, TreeItemCollapsibleState, Uri } from 'vscode';
 import { sep } from 'path';
 import { glob } from 'glob';
+import * as os from 'os';
 
 export enum BookmarkableKind{
     Group,
@@ -222,6 +223,9 @@ export class Favorite extends Bookmark {
      * @returns an URI object poiting to the underlying fs resource
      */
     get resourceUri(): Uri {
+        if (this.resourcePath.startsWith('~')) {
+            return Uri.file(this.resourcePath.replace('~', os.homedir()));
+        }
         return Uri.file(this.resourcePath);
     }
 

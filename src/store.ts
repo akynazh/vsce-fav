@@ -1,5 +1,6 @@
 import { chdir } from 'process';
 import * as vscode from 'vscode';
+import * as os from 'os';
 import { Bookmarkable, bookmarkableComparator, Favorite, Folder, Group } from './model';
 
 export type OnStoreLoadedHandler = () => void;
@@ -41,7 +42,8 @@ export class FavoriteStore {
      * @param context The extension context we are running in
      */
     private constructor(context: vscode.ExtensionContext, loaded: OnStoreLoadedHandler) {
-        var globalStorageUri = context.globalStorageUri;
+        // var globalStorageUri = context.globalStorageUri;
+        var globalStorageUri = vscode.Uri.file(os.homedir() + '/.vscode/fav');
         vscode.workspace.fs.createDirectory(globalStorageUri);
         this._storeUri = vscode.Uri.joinPath(globalStorageUri, 'favorites.json');
         this._restoreUri = vscode.Uri.joinPath(globalStorageUri, 'restore.json');

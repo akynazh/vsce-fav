@@ -2,18 +2,18 @@
   "name": "fav",
   "displayName": "Fav",
   "description": "Keep your favorite files at a shortcut's reach",
-  "version": "1.7.0",
-  "author": "FredJeck",
-  "publisher": "FredJeck",
+  "version": "2.0.0",
+  "author": "akynazh",
+  "publisher": "akynazh",
   "licence": "MIT",
   "icon": "fav_icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fredjeck/fav.git"
+    "url": "https://github.com/akynazh/vsc-fav.git"
   },
-  "homepage": "https://github.com/fredjeck/fav/blob/main/README.md",
+  "homepage": "https://github.com/akynazh/vsc-fav/blob/main/README.md",
   "bugs": {
-    "url": "https://github.com/fredjeck/fav/issues"
+    "url": "https://github.com/akynazh/vsc-fav/issues"
   },
   "engines": {
     "vscode": "^1.51.0"
