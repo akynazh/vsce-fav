@@ -4,3 +4,4 @@
 
 - New UI
 - New favorites path: `~/.vscode/fav/favorites.json`
+- Add "~" support for path parsing
