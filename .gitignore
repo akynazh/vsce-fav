@@ -2,7 +2,6 @@ out
 dist
 node_modules
 .vscode-test/
-*.vsix
 packages/
 
 # General
@@ -11,7 +10,8 @@ packages/
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
