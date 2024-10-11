@@ -290,6 +290,9 @@ export class Folder extends Bookmark {
      * @returns an URI object poiting to the underlying fs resource
      */
     get resourceUri(): Uri {
+        if (this.resourcePath.startsWith('~')) {
+            return Uri.file(this.resourcePath.replace('~', os.homedir()));
+        }
         return Uri.file(this.resourcePath);
     }
 

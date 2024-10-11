@@ -218,11 +218,8 @@ export class FavoriteManager {
      */
     async removeFavorite(favorite: Bookmarkable): Promise<void> {
         if (favorite) {
-            let choice = await vscode.window.showWarningMessage(`Remove '${favorite.label}' from your favorites ?`, 'Yes', 'No');
-            if ('Yes' === choice) {
-                this._store.delete(favorite);
-                this._provider.refresh(undefined);
-            }
+            this._store.delete(favorite);
+            this._provider.refresh(undefined);
         }
     }
 
