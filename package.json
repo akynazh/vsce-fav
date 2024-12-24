@@ -2,7 +2,7 @@
   "name": "fav",
   "displayName": "Fav",
   "description": "Keep your favorite files at a shortcut's reach",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "author": "akynazh",
   "publisher": "akynazh",
   "licence": "MIT",
@@ -295,13 +295,13 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "webpack --mode production",
-    "webpack": "webpack --mode development",
-    "webpack-dev": "webpack --mode development --watch",
+    "vscode:prepublish": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode production",
+    "webpack": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode development",
+    "webpack-dev": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode development --watch",
     "test-compile": "tsc -p ./",
     "lint": "eslint . --ext .ts,.tsx",
-    "package": "vsce package -o ./packages",
-    "publish": "vsce publish",
+    "package": "NODE_OPTIONS=--openssl-legacy-provider vsce package -o ./packages",
+    "publish": "NODE_OPTIONS=--openssl-legacy-provider vsce publish",
     "minor": "vsce publish minor",
     "patch": "vsce publish patch"
   },

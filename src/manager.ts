@@ -77,6 +77,7 @@ export class FavoriteManager {
             return;
         }
 
+
         if (!toGroup) {
             this._store.add(fav);
             this._provider.refresh();
@@ -107,6 +108,7 @@ export class FavoriteManager {
 
         let fav = new Favorite();
         fav.label = label;
+        path = path.replace(os.homedir(), '~');
         fav.resourcePath = path || '';
 
         return fav;
